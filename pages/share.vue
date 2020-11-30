@@ -17,6 +17,9 @@ export default {
   },
 
   mounted() {
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      console.log('share >> mounted >> message:', event.data)
+    })
     const parsedUrl = new URL(window.location)
     this.title = parsedUrl.searchParams.get('title')
     this.text = parsedUrl.searchParams.get('text')
