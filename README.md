@@ -1,4 +1,4 @@
-# pwa-receive-files
+# pwa-receive-data
 
 ## Build Setup
 

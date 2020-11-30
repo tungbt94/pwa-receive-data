@@ -4,7 +4,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'pwa-receive-files',
+    title: 'pwa-receive-data',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -43,23 +43,16 @@ export default {
 
   pwa: {
     manifest: {
-      name: "PWA file receive",
-      short_name: "PWA file",
+      name: 'PWA data receive',
+      short_name: 'PWA data',
       share_target: {
-        action: "/_share-target",
-        enctype: "multipart/form-data",
-        method: "POST",
+        action: '/share',
         params: {
-          files: [{
-            name: "media",
-            accept: [
-              "audio/*",
-              "image/*",
-              "video/*"
-            ]
-          }]
-        }
-      }
-    }
-  }
+          title: 'title',
+          text: 'text',
+          url: 'url',
+        },
+      },
+    },
+  },
 }
