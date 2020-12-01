@@ -1,8 +1,8 @@
 <template>
   <div class="share-data-display">
-    <p>{{ title }}</p>
-    <p>{{ text }}</p>
-    <p>{{ url }}</p>
+    <p>title: {{ title }}</p>
+    <p>text: {{ text }}</p>
+    <p>url: {{ url }}</p>
   </div>
 </template>
 
@@ -17,13 +17,10 @@ export default {
   },
 
   mounted() {
-    navigator.serviceWorker.addEventListener('message', (event) => {
-      console.log('share >> mounted >> message:', event.data)
-    })
     const parsedUrl = new URL(window.location)
     this.title = parsedUrl.searchParams.get('title')
     this.text = parsedUrl.searchParams.get('text')
-    this.url = parsedUrl.searchParams.get('url')
+    this.url = decodeURIComponent(parsedUrl.searchParams.get('url')) + '.html'
   },
 }
 </script>
