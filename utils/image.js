@@ -6,4 +6,4 @@ function bufferToImageUrl(buffer) {
   return imageUrl
 }
 
-export default { bufferToImageUrl }
+export { bufferToImageUrl }
