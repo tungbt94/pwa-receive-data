@@ -1,0 +1,12 @@
+{
+  "name": "screenshot",
+  "version": "1.0.0",
+  "description": "get screenshot from url",
+  "main": "index.js",
+  "author": "tungbt94 <tungbt94@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-aws-lambda": "^5.5.0",
+    "puppeteer-core": "^5.5.0"
+  }
+}
